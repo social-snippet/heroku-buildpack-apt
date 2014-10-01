@@ -3,5 +3,5 @@
 cat <<EOF
 ---
 config_vars:
-PATH: $PATH:/app/vendor/apt/bin
+PATH: $PATH:/app/vendor/apt/usr/bin
 EOF
