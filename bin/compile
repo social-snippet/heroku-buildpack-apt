@@ -57,7 +57,7 @@ for DEB in $(ls -1 $APT_CACHE_DIR/archives/*.deb); do
 done
 
 ls -R $HOME/vendor/apt
-export PATH="$HOME/vendor/apt:$PATH"
+export PATH="$HOME/vendor/apt/usr/bin:$PATH"
 
 exit 0
 
