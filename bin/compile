@@ -50,10 +50,13 @@ done
 
 mkdir -p $BUILD_DIR/.apt
 
+mkdir ./vendor/apt
 for DEB in $(ls -1 $APT_CACHE_DIR/archives/*.deb); do
   topic "Installing $(basename $DEB)"
-  dpkg -x $DEB /apt
+  dpkg -x $DEB ./vendor/apt
 done
+
+ls ./vendor/apt
 
 exit 0
 
