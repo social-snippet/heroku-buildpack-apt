@@ -50,14 +50,14 @@ done
 
 mkdir -p $BUILD_DIR/.apt
 
-mkdir -p ./vendor/apt
+mkdir -p $HOME/vendor/apt
 for DEB in $(ls -1 $APT_CACHE_DIR/archives/*.deb); do
   topic "Installing $(basename $DEB)"
-  dpkg -x $DEB ./vendor/apt
+  dpkg -x $DEB $HOME/vendor/apt
 done
 
-ls -R /app/vendor/apt
-export PATH="/app/vendor/apt:$PATH"
+ls -R $HOME/vendor/apt
+export PATH="$HOME/vendor/apt:$PATH"
 
 exit 0
 
