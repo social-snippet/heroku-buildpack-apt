@@ -2,7 +2,7 @@
 # bin/detect <build-dir>
 
 if [ -f $1/Aptfile ]; then
-  echo "Apt" && exit 0
+  echo "Apt/custom" && exit 0
 else
   echo "no" && exit 1
 fi
